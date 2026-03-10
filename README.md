@@ -2,17 +2,33 @@
 
 A collection of reusable [skills](https://code.claude.com/docs/en/skills) for Claude Code.
 
-## Skills
+## Task Skills
 
-| Skill | Description | Auto-trigger |
-|-------|-------------|:------------:|
-| `/ship-feature` | Commit changes, mark feature done in VISION.md, push | Manual |
-| `/fix-build` | Diagnose and fix build failures | Manual |
-| `/fix-issue` | Fix a GitHub issue end-to-end | Manual |
-| `/review-code` | Review code for bugs, security, and quality | Manual |
-| `/pr-summary` | Summarize a pull request with risks and review notes | Manual |
-| `/deploy` | Deploy the application to an environment | Manual |
-| `/explain-code` | Explain code with diagrams and analogies | Auto |
+Invoke these manually with `/skill-name` to perform specific actions.
+
+| Skill | Description |
+|-------|-------------|
+| `/ship-feature` | Commit changes, mark feature done in VISION.md, push |
+| `/fix-build` | Diagnose and fix build failures |
+| `/fix-issue` | Fix a GitHub issue end-to-end |
+| `/review-code` | Review code for bugs, security, and quality |
+| `/pr-summary` | Summarize a pull request with risks and review notes |
+| `/deploy` | Deploy the application to an environment |
+| `/test-writer` | Write or update tests for changed code |
+| `/explain-code` | Explain code with diagrams and analogies |
+
+## Background Skills
+
+Claude loads these automatically when relevant. They silently improve output quality without you having to prompt for it.
+
+| Skill | Triggers when |
+|-------|---------------|
+| `self-review` | Claude is about to report a task as complete |
+| `react-conventions` | Writing or modifying React components |
+| `ts-conventions` | Writing or modifying TypeScript code |
+| `git-conventions` | Creating commits or branches |
+| `security-check` | Handling user input, auth, or external data |
+| `minimal-changes` | Implementing any task (prevents over-engineering) |
 
 ## Usage
 
