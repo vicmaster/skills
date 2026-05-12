@@ -16,6 +16,7 @@ Invoke these manually with `/skill-name` to perform specific actions.
 | `/deploy` | Deploy the application to an environment |
 | `/test-writer` | Write or update tests for changed code |
 | `/explain-code` | Explain code with diagrams and analogies |
+| `/review-adoption` | Evaluate a link, library, or claim for adoption fit; outputs Adopt/Watch/Skip |
 
 ## Background Skills
 
